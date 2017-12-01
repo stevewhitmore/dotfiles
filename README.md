@@ -13,7 +13,7 @@ My xfce dotfiles for when I inevitably distro hop
 ##### Tmux and Vim themes
 ![tmux and vim theme](https://i.imgur.com/4ty1U1T.png)
 
-##### Directory Structure
-Tmux and Vim: `~` 
-Desktop & Icon themes: `~/.local/share/` 
-Window Manager: `/usr/share/themes/` 
+### Directory Structure
+* Tmux and Vim: `~` 
+* Desktop & Icon themes: `~/.local/share/` 
+* Window Manager: `/usr/share/themes/` 
