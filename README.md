@@ -5,7 +5,7 @@ My xfce dotfiles for when I inevitably distro hop
 * Desktop: Arc Dark
 * Window Manager: Numix
 * Icons: Yltra Flat Arch Blue
-* Wallpaper: GLaDOS Minimal
+* Wallpaper: GLaDOS Minimal <https://imgur.com/EAHmt6r>
 
 ##### Desktop Look
 ![Desktop look](https://i.imgur.com/p45IX7i.png)
