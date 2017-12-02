@@ -8,7 +8,7 @@ My xfce dotfiles for when I inevitably distro hop
 * Wallpaper: GLaDOS Minimal [<https://imgur.com/EAHmt6r>]
 
 ##### Desktop Look
-![Desktop look](https://i.imgur.com/KxKdNqS.png)
+![Desktop look](https://imgur.com/4a7SWl3)
 
 ##### Tmux and Vim themes
 ![tmux and vim theme](https://i.imgur.com/4ty1U1T.png)
