@@ -120,6 +120,7 @@ fi
 
 alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias hammatime="cd ~/workspace/Motion_Constrained; ls -la"
+alias homescrns="sh ~/bin/homescreens.sh"
 alias wifireset="sudo service network-manager restart"
 
 ## Define colors
@@ -131,10 +132,6 @@ BLUE="\[\033[1;34m\]"
 export PS1="$GREEN\u@\h: $BLUE\w\n[\t]->$WHITE % " 
 
 #cowsay "For a good time, type \"git config credential.helper 'cache --timeout={number}'\""
-
-
-xmodmap -e "keycode 94 = grave asciitilde" 
-
 
 if [[ ! $TERM =~ screen ]]; then
     exec tmux
