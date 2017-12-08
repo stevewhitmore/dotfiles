@@ -7,11 +7,7 @@ My xfce dotfiles for when I inevitably distro hop
 * Icons: Yltra Flat Arch Blue
 * Wallpaper: GLaDOS Minimal [<https://imgur.com/EAHmt6r>]
 
-##### Desktop Look
 ![Desktop look](https://imgur.com/4a7SWl3.png)
-
-##### Tmux and Vim themes
-![tmux and vim theme](https://i.imgur.com/4ty1U1T.png)
 
 ### Directory Structure
 * Tmux and Vim: `~` 
