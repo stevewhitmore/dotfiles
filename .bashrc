@@ -116,27 +116,28 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
 # ++++++++++++++++++++++++++++++ my edits ++++++++++++++++++++++++++++++ #
+#git config --global credential.helper 'cache --timeout={number in seconds}'
 
 alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
-alias hammatime="cd ~/workspace/Motion_Constrained; ls -la"
-alias homescrns="sh ~/bin/homescreens.sh"
-alias wifireset="sudo service network-manager restart"
+alias hamma="cd ~/workspace/MotionConstrained; ls -la"
+alias netreset="sudo service network-manager restart"
+alias springrun="./mvnw spring-boot:run" 
 
-## Define colors
 WHITE="\[\033[m\]"
 GREEN="\[\033[1;32m\]"
 BLUE="\[\033[1;34m\]"
 
-## Set your prompt color
 export PS1="$GREEN\u@\h: $BLUE\w\n[\t]->$WHITE % " 
 
-#cowsay "For a good time, type \"git config credential.helper 'cache --timeout={number}'\""
-
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
+#if [[ ! $TERM =~ screen ]]; then
+#    exec tmux
+#fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export JAVA_HOME
