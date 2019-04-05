@@ -125,11 +125,11 @@ alias hamma="cd ~/workspace/MotionConstrained; ls -la"
 alias netreset="sudo service network-manager restart"
 alias springrun="./mvnw spring-boot:run" 
 
-WHITE="\[\033[m\]"
-GREEN="\[\033[1;32m\]"
-BLUE="\[\033[1;34m\]"
+white="\[\033[m\]"
+green="\[\033[1;32m\]"
+blue="\[\033[1;34m\]"
 
-export PS1="$GREEN\u@\h: $BLUE\w\n[\t]->$WHITE % " 
+export PS1="$green\u@\h: $blue\w\n[\t]->$white % " 
 
 #if [[ ! $TERM =~ screen ]]; then
 #    exec tmux
