@@ -118,7 +118,9 @@ fi
 
 
 # ++++++++++++++++++++++++++++++ my edits ++++++++++++++++++++++++++++++ #
-#git config --global credential.helper 'cache --timeout={number in seconds}'
+# git config --global credential.helper 'cache --timeout={number in seconds}'
+# xfce4-taskmanager
+# xfce4-panel -r
 
 alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias hamma="cd ~/workspace/MotionConstrained; ls -la"
