@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+j ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -118,14 +118,11 @@ fi
 
 
 # ++++++++++++++++++++++++++++++ my edits ++++++++++++++++++++++++++++++ #
-# git config --global credential.helper 'cache --timeout={number in seconds}'
-# xfce4-taskmanager
-# xfce4-panel -r
-
 alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias hamma="cd ~/workspace/MotionConstrained; ls -la"
-alias netreset="sudo service network-manager restart"
-alias springrun="./mvnw spring-boot:run" 
+alias wifireset="sudo service network-manager restart"
+alias springrun="./mvnw spring-boot:run"
+alias python="python3.7"
 
 white="\[\033[m\]"
 green="\[\033[1;32m\]"
@@ -137,9 +134,13 @@ export PS1="$green\u@\h: $blue\w\n[\t]->$white % "
 #    exec tmux
 #fi
 
+export PATH=/usr/local/apache-maven-3.6.0/bin:$PATH
+
+# fuser -k 8080/tcp
+# mvn -N io.takari:maven:wrapper //creates .mvn folder and puts required jar in it to run ./mvnw -e spring-boot:run
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
-export JAVA_HOME
+export CHROME_BIN=/snap/bin/chromium
