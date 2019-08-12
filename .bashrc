@@ -118,14 +118,12 @@ fi
 
 
 # ++++++++++++++++++++++++++++++ my edits ++++++++++++++++++++++++++++++ #
-# git config --global credential.helper 'cache --timeout={number in seconds}'
-# xfce4-taskmanager
-# xfce4-panel -r
-
 alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias hamma="cd ~/workspace/MotionConstrained; ls -la"
 alias netreset="sudo service network-manager restart"
 alias springrun="./mvnw spring-boot:run" 
+alias python="python3"
+alias bluetoothrestart="sudo /etc/init.d/bluetooth restart"
 
 white="\[\033[m\]"
 green="\[\033[1;32m\]"
@@ -143,3 +141,7 @@ export NVM_DIR="$HOME/.nvm"
 
 JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export JAVA_HOME
+
+export CHROME_BIN=/snap/bin/chromium
+
+export PATH=$PATH:/usr/local/go/bin
