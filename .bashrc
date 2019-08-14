@@ -120,9 +120,10 @@ fi
 # ++++++++++++++++++++++++++++++ my edits ++++++++++++++++++++++++++++++ #
 alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias hamma="cd ~/workspace/MotionConstrained; ls -la"
-alias wifireset="sudo service network-manager restart"
-alias springrun="./mvnw spring-boot:run"
-alias python="python3.7"
+alias netreset="sudo service network-manager restart"
+alias springrun="./mvnw spring-boot:run" 
+alias python="python3"
+alias bluetoothrestart="sudo /etc/init.d/bluetooth restart"
 
 white="\[\033[m\]"
 green="\[\033[1;32m\]"
@@ -143,4 +144,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export JAVA_HOME
+
 export CHROME_BIN=/snap/bin/chromium
+
+export PATH=$PATH:/usr/local/go/bin
