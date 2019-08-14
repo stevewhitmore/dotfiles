@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+j ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -134,6 +134,11 @@ export PS1="$green\u@\h: $blue\w\n[\t]->$white % "
 #if [[ ! $TERM =~ screen ]]; then
 #    exec tmux
 #fi
+
+export PATH=/usr/local/apache-maven-3.6.0/bin:$PATH
+
+# fuser -k 8080/tcp
+# mvn -N io.takari:maven:wrapper //creates .mvn folder and puts required jar in it to run ./mvnw -e spring-boot:run
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
