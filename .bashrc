@@ -124,6 +124,7 @@ alias netreset="sudo service network-manager restart"
 alias springrun="./mvnw spring-boot:run" 
 alias python="python3"
 alias bluetoothrestart="sudo /etc/init.d/bluetooth restart"
+alias readmail="cat /var/spool/mail/$USER | less"
 
 white="\[\033[m\]"
 green="\[\033[1;32m\]"
@@ -135,11 +136,6 @@ export PS1="$green\u@\h: $blue\w\n[\t]->$white % "
 #    exec tmux
 #fi
 
-export PATH=/usr/local/apache-maven-3.6.0/bin:$PATH
-
-# fuser -k 8080/tcp
-# mvn -N io.takari:maven:wrapper //creates .mvn folder and puts required jar in it to run ./mvnw -e spring-boot:run
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -149,3 +145,4 @@ export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export CHROME_BIN=/snap/bin/chromium
 
 export PATH=$PATH:/usr/local/go/bin
+
