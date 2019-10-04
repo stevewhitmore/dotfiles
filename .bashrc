@@ -125,12 +125,18 @@ alias springrun="./mvnw spring-boot:run"
 alias python="python3"
 alias bluetoothrestart="sudo /etc/init.d/bluetooth restart"
 alias readmail="cat /var/spool/mail/$USER | less"
+alias updateapi="sudo cp -r api/* /var/www/html/api/"
+alias openarchium="chromium-browser --disable-web-security --user-data-dir=\"/home/swhitmore/Desktop/temp\""
 
-white="\[\033[m\]"
-green="\[\033[1;32m\]"
-blue="\[\033[1;34m\]"
-
-export PS1="$green\u@\h: $blue\w\n[\t]->$white % " 
+function color_my_prompt {
+    local user_and_host="\[\033[01;32m\]\u@\h"
+    local cur_location="\[\033[34m\]\w"
+    local git_branch_color="\[\033[33m\]"
+    local git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+    local prompt_tail="\[\033[34m\][\t]-> \[\033[m\]$ "
+    export PS1="$user_and_host $cur_location $git_branch_color$git_branch\n$prompt_tail"
+}
+color_my_prompt
 
 #if [[ ! $TERM =~ screen ]]; then
 #    exec tmux
