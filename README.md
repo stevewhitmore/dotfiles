@@ -24,4 +24,4 @@ Same as above except the following:
 * Window Manager: `/usr/share/themes/` 
 
 ### NeoVim
-After adding the contents of 'nvim' to ~/.config/nvim open up vim and type `:PluginInstall' 
+After adding the contents of **nvim** to **~/.config/nvim** open up vim and type `:PluginInstall`
