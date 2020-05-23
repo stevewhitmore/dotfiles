@@ -30,4 +30,4 @@ Same as above except the following:
 
 ## NeoVim
 
-After adding the contents of **nvim** to **~/.config/nvim** open up vim and type `:PluginInstall`
+After adding the contents of **nvim** to **~/.config/nvim** open up vim and type `:PlugInstall`
