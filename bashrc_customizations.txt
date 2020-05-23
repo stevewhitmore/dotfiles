@@ -1,0 +1,31 @@
+# ++++++++++++++++++++++++++++++ my edits ++++++++++++++++++++++++++++++ #
+alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
+alias netreset="sudo service network-manager restart"
+alias bluetoothrestart="sudo /etc/init.d/bluetooth restart"
+alias readmail="cat /var/spool/mail/$USER | less"
+alias purgebranches="git branch | grep -v "master" | xargs git branch -D"
+
+function color_my_prompt {
+    local user_and_host="\[\033[01;32m\]\u@\h"
+    local cur_location="\[\033[34m\]\w"
+    local git_branch_color="\[\033[33m\]"
+    local git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+    local prompt_tail="\[\033[34m\][\t]-> \[\033[m\]$ "
+    export PS1="$user_and_host $cur_location $git_branch_color$git_branch\n$prompt_tail"
+}
+color_my_prompt
+
+#if [[ ! $TERM =~ screen ]]; then
+#    exec tmux
+#fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+
+export CHROME_BIN=/snap/bin/chromium
+
+export PATH=$PATH:/usr/local/go/bin
+
