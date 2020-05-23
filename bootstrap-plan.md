@@ -7,6 +7,9 @@ Restructure project to have user simply run a script to set up environment as ne
 - Bash package installation
 - Bash customization (tmux, .bashrc, neovim plugins)
 - DE Theming
+- SDK installation (pip, selenium, chromedriver, openjdk, nvm, angular-cli, vue-cli)
+- VSCode, VMWare Horizon Client, Brave
+- Update favorites in whisker menu
 
 ## Plan (tentative)
 
@@ -28,6 +31,4 @@ Restructure project to have user simply run a script to set up environment as ne
 - programatically activate theme
 - restart bash/de as needed
 
-### Other notes
 
-May need to have decision tree branch off between xfce and cinnamon. Look into possibility of making it work for both as much as possible with user prompts
