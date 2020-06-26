@@ -5,6 +5,7 @@ alias bluetoothrestart="sudo /etc/init.d/bluetooth restart"
 alias readmail="cat /var/spool/mail/$USER | less"
 alias purgebranches="git branch | grep -v "master" | xargs git branch -D"
 alias systeminfo="inxi -Fxz"
+alias vim="nvim"
 
 function color_my_prompt {
     local user_and_host="\[\033[01;32m\]\u@\h"
