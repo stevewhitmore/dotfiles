@@ -1,10 +1,9 @@
 # ++++++++++++++++++++++++++++++ my edits ++++++++++++++++++++++++++++++ #
 alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
-alias netreset="sudo service network-manager restart"
-alias bluetoothrestart="sudo /etc/init.d/bluetooth restart"
+alias netreset="sudo systemctl restart NetworkManager"
 alias readmail="cat /var/spool/mail/$USER | less"
 alias purgebranches="git branch | grep -v "master" | xargs git branch -D"
-alias systeminfo="inxi -Fxz"
+alias hardwareinfo="inxi -Fxz"
 alias vim="nvim"
 
 function color_my_prompt {
@@ -21,13 +20,23 @@ color_my_prompt
 #    exec tmux
 #fi
 
+# wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
+# nvm install --lts
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# sudo dnf install java-11-openjdk.x86_64
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
+# sudo dnf install chromium-common.x86_64
 export CHROME_BIN=/snap/bin/chromium
 
+# dnf install golang
 export PATH=$PATH:/usr/local/go/bin
 
+# git clone git@github.com:hkbakke/bash-insulter.git
+# sudo cp bash-insulter/src/bash.command-not-found /etc/
+if [ -f /etc/bash.command-not-found ]; then
+. /etc/bash.command-not-found
+fi
