@@ -5,6 +5,8 @@ alias readmail="cat /var/spool/mail/$USER | less"
 alias purgebranches="git branch | grep -v "master" | xargs git branch -D"
 alias hardwareinfo="inxi -Fxz"
 alias vim="nvim"
+alias TODOS="cd ~/Dropbox/mine/work/sidework-notes && vim TODOs.md"
+alias hammatime="cd ~/workspace/work/MotionConstrained && ls -l"
 
 function color_my_prompt {
     local user_and_host="\[\033[01;32m\]\u@\h"
@@ -30,15 +32,16 @@ export NVM_DIR="$HOME/.nvm"
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
 # sudo dnf install chromium-common.x86_64
-export CHROME_BIN=/snap/bin/chromium
+#export CHROME_BIN=/snap/bin/chromium
 
 # dnf install golang
 export PATH=$PATH:/usr/local/go/bin
 
 # git clone git@github.com:hkbakke/bash-insulter.git
 # sudo cp bash-insulter/src/bash.command-not-found /etc/
-if [ -f /etc/bash.command-not-found ]; then
-. /etc/bash.command-not-found
-fi
+#if [ -f /etc/bash.command-not-found ]; then
+#. /etc/bash.command-not-found
+#fi
 
 export PATH=$PATH:/opt/firefox/firefox
+export CHROME_BIN=$PATH:/usr/bin/chromium-browser
