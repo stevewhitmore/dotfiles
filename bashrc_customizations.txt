@@ -1,4 +1,14 @@
+# ********************************************************************** #
 # ++++++++++++++++++++++++++++++ my edits ++++++++++++++++++++++++++++++ #
+# ********************************************************************** #
+
+## Aliases
+## Prompt coloring
+## Path updates
+## Bad experiments 
+
+# ++++++++++++++++++++++++++++++ Aliases ++++++++++++++++++++++++++++++ #
+
 alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias netreset="sudo systemctl restart NetworkManager"
 alias readmail="cat /var/spool/mail/$USER | less"
@@ -7,6 +17,8 @@ alias hardwareinfo="inxi -Fxz"
 alias vim="nvim"
 alias TODOS="cd ~/Dropbox/mine/work/sidework-notes && vim TODOs.md"
 alias hammatime="cd ~/workspace/work/MotionConstrained && ls -l"
+
+# ++++++++++++++++++++++++++++++ Prompt coloring ++++++++++++++++++++++++++++++ #
 
 function color_my_prompt {
     local user_and_host="\[\033[01;32m\]\u@\h"
@@ -18,9 +30,7 @@ function color_my_prompt {
 }
 color_my_prompt
 
-#if [[ ! $TERM =~ screen ]]; then
-#    exec tmux
-#fi
+# ++++++++++++++++++++++++++++++ Path updates ++++++++++++++++++++++++++++++ #
 
 # wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
 # nvm install --lts
@@ -45,3 +55,14 @@ export PATH=$PATH:/usr/local/go/bin
 
 export PATH=$PATH:/opt/firefox/firefox
 export CHROME_BIN=$PATH:/usr/bin/chromium-browser
+
+# ++++++++++++++++++++++++++++++ Bad experiments ++++++++++++++++++++++++++++++ #
+
+#if [[ ! $TERM =~ screen ]]; then
+#    exec tmux
+#fi
+
+function cvv() {
+    tmux \
+        new-session "vim .bashrc" 
+}
