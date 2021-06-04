@@ -15,7 +15,7 @@ alias readmail="cat /var/spool/mail/$USER | less"
 alias purgebranches="git branch | grep -v "master" | xargs git branch -D"
 alias hardwareinfo="inxi -Fxz"
 alias vim="nvim"
-alias TODOS="cd ~/workspace/mine/sidework-notes && vim TODOs.md"
+alias TODOS="cd ~/workspace/mine/sidework-notes && git pull && vim TODOs.md"
 alias hammatime="cd ~/workspace/work/MotionConstrained && ls -l"
 
 # ++++++++++++++++++++++++++++++ Prompt coloring ++++++++++++++++++++++++++++++ #
