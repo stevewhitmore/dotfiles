@@ -17,6 +17,7 @@ alias hardwareinfo="inxi -Fxz"
 alias vim="nvim"
 alias TODOS="cd ~/workspace/mine/sidework-notes && git pull && vim TODOs.md"
 alias hammatime="cd ~/workspace/work/MotionConstrained && ls -l"
+alias run="./bin/run.sh"
 
 # ++++++++++++++++++++++++++++++ Prompt coloring ++++++++++++++++++++++++++++++ #
 
@@ -34,9 +35,8 @@ color_my_prompt
 
 # wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
 # nvm install --lts
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # sudo dnf install java-11-openjdk.x86_64
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
