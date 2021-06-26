@@ -17,6 +17,7 @@ alias hardwareinfo="inxi -Fxz"
 alias vim="nvim"
 alias TODOS="cd ~/workspace/mine/sidework-notes && git pull && vim TODOs.md"
 alias hammatime="cd ~/workspace/work/MotionConstrained && ls -l"
+alias book="evince ~/Documents/linux_bible_9th_edition.pdf"
 
 # ++++++++++++++++++++++++++++++ Prompt coloring ++++++++++++++++++++++++++++++ #
 
