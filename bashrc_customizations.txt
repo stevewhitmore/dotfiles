@@ -32,7 +32,7 @@ function color_my_prompt {
 }
 color_my_prompt
 
-# ++++++++++++++++++++++++++++++ Path updates ++++++++++++++++++++++++++++++ #
+# ++++++++++++++++++++++++++++++ Environment variables ++++++++++++++++++++++++++++++ #
 
 # wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
 # nvm install --lts
@@ -42,22 +42,19 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # sudo dnf install java-11-openjdk.x86_64
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
-# sudo dnf install chromium-common.x86_64
-#export CHROME_BIN=/snap/bin/chromium
+# ++++++++++++++++++++++++++++++ Path updates ++++++++++++++++++++++++++++++ #
 
-# dnf install golang
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/opt/firefox/firefox
+export CHROME_BIN=$PATH:/usr/bin/chromium-browser
+export HISTTIMEFORMAT="%F %T "
 
-# git clone git@github.com:hkbakke/bash-insulter.git
+# ++++++++++++++++++++++++++++++ Bad experiments ++++++++++++++++++++++++++++++ #
+
+# git clone git@github.com:hkbakke/bash-insulter.gitV
 # sudo cp bash-insulter/src/bash.command-not-found /etc/
 #if [ -f /etc/bash.command-not-found ]; then
 #. /etc/bash.command-not-found
 #fi
-
-export PATH=$PATH:/opt/firefox/firefox
-export CHROME_BIN=$PATH:/usr/bin/chromium-browser
-
-# ++++++++++++++++++++++++++++++ Bad experiments ++++++++++++++++++++++++++++++ #
 
 #if [[ ! $TERM =~ screen ]]; then
 #    exec tmux
