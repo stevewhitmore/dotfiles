@@ -18,6 +18,7 @@ alias vim="nvim"
 alias TODOS="cd ~/workspace/mine/sidework-notes && git pull && vim TODOs.md"
 alias hammatime="cd ~/workspace/work/MotionConstrained && ls -l"
 alias book="evince ~/Documents/linux_bible_9th_edition.pdf"
+alias pip_upgrade="pipupgrade --verbose --latest --yes"
 
 # ++++++++++++++++++++++++++++++ Prompt coloring ++++++++++++++++++++++++++++++ #
 
@@ -63,3 +64,4 @@ function cvv() {
     tmux \
         new-session "vim .bashrc" 
 }
+alias code="flatpak run com.visualstudio.code"
