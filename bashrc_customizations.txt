@@ -19,6 +19,7 @@ alias TODOS="cd ~/workspace/mine/sidework-notes && git pull && vim TODOs.md"
 alias hammatime="cd ~/workspace/work/MotionConstrained && ls -l"
 alias book="evince ~/Documents/linux_bible_9th_edition.pdf"
 alias pip_upgrade="pipupgrade --verbose --latest --yes"
+alias code="flatpak run com.visualstudio.code"
 alias sandbox="cd ~/workspace/z_sandbox && ls -l"
 
 # ++++++++++++++++++++++++++++++ Prompt coloring ++++++++++++++++++++++++++++++ #
@@ -65,4 +66,18 @@ function cvv() {
     tmux \
         new-session "vim .bashrc" 
 }
-alias code="flatpak run com.visualstudio.code"
+
+# Assumes `bluetooth_battery.py` is chmod'd with 755 (+x) permissions.
+# Change "mac_address" and file path as needed.
+# See https://gitlab.com/-/snippets/2203555 for details.
+function bluetoothbattery {
+    local mac_address="FC:58:FA:AC:5B:DF"
+    local current_location=$(pwd)
+
+    cd ~/workspace/Bluetooth_Headset_Battery_Level || exit
+    bluetoothctl disconnect "$mac_address"
+    ./bluetooth_battery.py "$mac_address"
+    cd "$current_location"
+}
+
+export EDITOR=nvim
