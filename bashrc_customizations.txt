@@ -72,12 +72,11 @@ function cvv() {
 # See https://gitlab.com/-/snippets/2203555 for details.
 function bluetoothbattery {
     local mac_address="FC:58:FA:AC:5B:DF"
-    local current_location=$(pwd)
 
     cd ~/workspace/Bluetooth_Headset_Battery_Level || exit
     bluetoothctl disconnect "$mac_address"
     ./bluetooth_battery.py "$mac_address"
-    cd "$current_location"
+    cd -
 }
 
 export EDITOR=nvim
