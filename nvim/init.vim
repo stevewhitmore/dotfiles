@@ -43,3 +43,4 @@ set ignorecase
 set smartcase
 set diffopt +=iwhite
 
+let NERDTreeShowHidden=1
