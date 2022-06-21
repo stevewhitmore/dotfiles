@@ -80,4 +80,8 @@ function bluetoothbattery {
     cd -
 }
 
+function portprocess {
+   lsof -w -n -i tcp:$1
+}
+
 export EDITOR=nvim
