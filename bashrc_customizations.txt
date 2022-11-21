@@ -12,7 +12,7 @@
 alias pubip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias netreset="sudo systemctl restart NetworkManager"
 alias readmail="cat /var/spool/mail/$USER | less"
-alias purgebranches="git branch | grep -v "master" | xargs git branch -D"
+alias purgebranches="git branch | grep -v "main" | xargs git branch -D"
 alias hardwareinfo="inxi -Fxz"
 alias vim="nvim"
 alias TODOS="cd ~/workspace/mine/sidework-notes && git pull && vim TODOs.md"
